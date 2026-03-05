@@ -18,7 +18,6 @@ export class loginPage{
         await this.username.fill(username);
         await this.password.fill(password);
         await this.loginBtn.click();
+        await this.page.waitForTimeout(10000);
     }
-
-
 }
