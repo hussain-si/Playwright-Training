@@ -6,7 +6,7 @@ test('Login functionality test',async ({page})=>{
     await page.goto('https://crio-qkart-frontend-qa.vercel.app/login');
 
     const Login = new loginPage(page);
-    Login.login('Admin10000','Admin10000');
+    await Login.login('Admin10000','Admin10000');
 
 
 })
