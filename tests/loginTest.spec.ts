@@ -8,5 +8,5 @@ test('Login functionality test',async ({page})=>{
     const Login = new loginPage(page);
     await Login.login('Admin10000','Admin10000');
 
-
+    //demo
 })
