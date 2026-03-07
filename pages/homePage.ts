@@ -16,7 +16,7 @@ export class HomePage {
         this.sizeDropdown = page.getByLabel('Size');
         this.addToCartBtn = page.getByRole('button', { name: 'Add to cart' });
         this.checkoutBtn = page.getByRole('button', { name: 'Checkout' });
-        this.itemInCartMessage = page.getByText('Item already in cart. Use the');
+        this.itemInCartMessage = page.locator('#notistack-snackbar');
     }
 
     async searchProduct(productName: string): Promise<void> {
