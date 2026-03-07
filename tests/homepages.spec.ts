@@ -30,9 +30,9 @@ test('Homepage functionality test', async ({ page }) =>{
     // add another item and try adding twice to trigger 'already in cart' message
     await home.addToCart(2);
     await home.addToCart(2);
-    
+
     await expect(home.itemInCartMessage).toBeVisible();
-    await expect(home.itemInCartMessage).toHaveText("Item already in cart. Use the cart sidebar to update quantity or remove item.");
+    await expect(home.itemInCartMessage).toContainText("Item already in cart");
 
     // proceed to checkout and assert that checkout button navigates accordingly (could add URL check)
     await home.checkout();

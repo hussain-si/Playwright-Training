@@ -14,7 +14,7 @@ export class HomePage {
         this.qkartLogo = page.getByRole('link', { name: 'QKart-icon' });
         this.searchBox = page.getByRole('textbox', { name: 'Search for items/categories' });
         this.sizeDropdown = page.getByLabel('Size');
-        this.addToCartBtn = page.getByRole('button', { name: 'Add to cart' });
+        this.addToCartBtn = page.locator('button:has-text("Add to cart")');
         this.checkoutBtn = page.getByRole('button', { name: 'Checkout' });
         this.itemInCartMessage = page.locator('#notistack-snackbar');
     }
