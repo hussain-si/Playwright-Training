@@ -9,28 +9,28 @@ test('Login functionality test',async ({page})=>{
     
     // Username required validation
     await Login.login('','');
-    await expect(Login.usernameError).toBeVisible();
-    await expect(Login.usernameError).toHaveText("Username is a required field");
+    await expect(Login.notification).toBeVisible();
+    await expect(Login.notification).toHaveText("Username is a required field");
 
     // Password required validation
     await Login.login('Admin10000','');
-    await expect(Login.passwordError).toBeVisible();
-    await expect(Login.passwordError).toHaveText("Password is a required field");
+    await expect(Login.notification).toBeVisible();
+    await expect(Login.notification).toHaveText("Password is a required field");
 
     // Username does not exist
     await Login.login('Admin1000','Admin10000');
-    await expect(Login.usernameNotExist).toBeVisible();
-    await expect(Login.usernameNotExist).toHaveText("Username does not exist");
+    await expect(Login.notification).toBeVisible();
+    await expect(Login.notification).toHaveText("Username does not exist");
 
     // Incorrect password
     await Login.login('Admin10000','Admin1000');
-    await expect(Login.passwordNotCorrect).toBeVisible();
-    await expect(Login.passwordNotCorrect).toHaveText("Password is incorrect");
+    await expect(Login.notification).toBeVisible();
+    await expect(Login.notification).toHaveText("Password is incorrect");
 
     //Login 
     await Login.login('Admin10000','Admin10000');
 
     //Login Successfully
-    await expect(Login.loginSuccess).toBeVisible();
-    await expect(Login.loginSuccess).toHaveText("Logged in successfully");
+    await expect(Login.notification).toBeVisible();
+    await expect(Login.notification).toHaveText("Logged in successfully");
 })

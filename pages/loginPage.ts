@@ -6,23 +6,15 @@ export class loginPage{
     username : Locator;
     password : Locator;
     loginBtn : Locator;
-    usernameError : Locator;
-    passwordError : Locator;
-    usernameNotExist : Locator;
-    passwordNotCorrect : Locator;
-    loginSuccess : Locator;
-
+    notification : Locator;
+    
 
     constructor(page : Page){
         this.page = page;
         this.username = page.locator('#username');
         this.password = page.locator('#password');
         this.loginBtn = page.locator('//button').nth(1);
-        this.usernameError = page.locator("#notistack-snackbar");
-        this.passwordError = page.locator("#notistack-snackbar");
-        this.usernameNotExist = page.locator("#notistack-snackbar");
-        this.passwordNotCorrect = page.locator("#notistack-snackbar");
-        this.loginSuccess = page.locator("#notistack-snackbar");
+        this.notification = page.locator("#notistack-snackbar");
 
     }
 
