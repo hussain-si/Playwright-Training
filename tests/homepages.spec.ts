@@ -30,7 +30,6 @@ test('Homepage functionality test', async ({ page }) =>{
     // add another item and try adding twice to trigger 'already in cart' message
     await home.addToCart(2);
     await home.addToCart(2);
-    await home.handleItemAlreadyInCart();
     await expect(home.itemInCartMessage).toBeVisible();
     await expect(home.itemInCartMessage).toHaveText("Item already in cart. Use the cart sidebar to update quantity or remove item.");
 

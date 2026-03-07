@@ -41,8 +41,4 @@ export class HomePage {
     async checkout(): Promise<void> {
         await this.checkoutBtn.click();
     }
-
-    async handleItemAlreadyInCart(): Promise<void> {
-        await this.itemInCartMessage.click();
-    }
 }
