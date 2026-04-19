@@ -11,4 +11,5 @@ test('Login functionality test',async ({page})=>{
 
     //demo
     //demo1
+    //demo2
 })
