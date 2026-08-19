@@ -1,7 +1,7 @@
 {
   "name": "playwright-training",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000P\u0000l\u0000a\u0000y\u0000w\u0000r\u0000i\u0000g\u0000h\u0000t\u0000-\u0000T\u0000r\u0000a\u0000i\u0000n\u0000i\u0000n\u0000g\u0000\r\u0000 \u0000",
+  "description":"",
   "main": "index.js",
   "scripts": {},
   "repository": {
@@ -22,4 +22,3 @@
   }
 }
 
-//demo1
